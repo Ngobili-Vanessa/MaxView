@@ -1,0 +1,27 @@
+[
+  {
+    "id": "anime-001",
+    "name": "Naruto Uzumaki",
+    "category": "anime",
+    "series": "Naruto",
+    "image": "",
+    "biography": "A young ninja who dreams of becoming Hokage and earning the respect of his village.",
+    "traits": [
+      "Determined",
+      "Loyal",
+      "Energetic"
+    ]
+  },
+  {
+    "id": "gaming-001",
+    "name": "Example Character",
+    "category": "gaming",
+    "series": "Example Game",
+    "image": "",
+    "biography": "Character biography goes here.",
+    "traits": [
+      "Brave",
+      "Strategic"
+    ]
+  }
+]

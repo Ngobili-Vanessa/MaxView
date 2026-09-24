@@ -1,0 +1,12 @@
+[
+  {
+    "id": "merch-001",
+    "name": "Example Fandom Hoodie",
+    "category": "anime",
+    "image": "",
+    "priceRange": "₦25,000 - ₦35,000",
+    "description": "A comfortable fandom-inspired hoodie for everyday wear.",
+    "details": "Available in different sizes and designs.",
+    "availability": "Available"
+  }
+]
