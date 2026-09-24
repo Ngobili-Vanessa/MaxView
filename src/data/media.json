@@ -1,0 +1,13 @@
+[
+  {
+    "id": "media-001",
+    "title": "Example Trailer",
+    "category": "anime",
+    "mediaType": "trailer",
+    "thumbnail": "",
+    "description": "A short description of the media content.",
+    "date": "2026-09-20",
+    "releaseStatus": "upcoming",
+    "url": ""
+  }
+]

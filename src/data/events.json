@@ -1,0 +1,20 @@
+[
+  {
+    "id": "anime-event-001",
+    "title": "Anime Expo 2026",
+    "category": "anime",
+    "date": "2026-07-02",
+    "location": "Los Angeles, USA",
+    "description": "A major celebration featuring anime screenings, panels, exhibitors and fan activities.",
+    "image": ""
+  },
+  {
+    "id": "gaming-event-001",
+    "title": "Example Gaming Event",
+    "category": "gaming",
+    "date": "2026-10-15",
+    "location": "Lagos, Nigeria",
+    "description": "A gaming event featuring competitions, showcases and community activities.",
+    "image": ""
+  }
+]

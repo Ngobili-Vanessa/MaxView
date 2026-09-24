@@ -1,0 +1,35 @@
+[
+  {
+    "id": "faq-001",
+    "type": "faq",
+    "question": "What is MaxView?",
+    "keywords": [
+      "maxview",
+      "what is maxview",
+      "about maxview"
+    ],
+    "answer": "MaxView is a fandom and entertainment discovery platform where Viewers can explore anime, gaming, movies, TV shows, K-pop, comics and manga."
+  },
+  {
+    "id": "faq-002",
+    "type": "navigation",
+    "question": "Where can I find anime?",
+    "keywords": [
+      "anime",
+      "find anime",
+      "anime section"
+    ],
+    "answer": "You can explore anime content from the Categories section."
+  },
+  {
+    "id": "faq-003",
+    "type": "recommendation",
+    "question": "Recommend something for me",
+    "keywords": [
+      "recommend",
+      "recommendation",
+      "suggest something"
+    ],
+    "answer": "Tell me what you're interested in — anime, gaming, movies, TV shows, K-pop, comics or manga — and I'll point you in the right direction."
+  }
+]
