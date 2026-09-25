@@ -1,27 +1,44 @@
 import "./Home.css";
+import categories from "../data/categories.json";
 
 function Home() {
     return (
         <div className="home">
-            <section className="home-hero">
-                <div className="container">
-                    <span className="home-eyebrow">WELCOME TO MAXVIEW</span>
-                    <h1>
-                        Your world of <span>fandom.</span>
-                    </h1>
-                    <p>
-                        Discover anime, gaming, movies, TV shows, K-pop, comics and manga - all in one place.
-                    </p>
-                    <div className="home-hero-actions">
-                        <a href="/category/anime" className="btn btn-primary">
-                        Explore Categories
-                        </a>
-                        <a href="/search" className="btn btn-secondary">
-                        Search MaxView
-                        </a>
-                    </div>
-                </div>
-            </section>
+           <section className="home-hero">
+  <div className="container home-hero-container">
+
+    <div className="home-hero-content">
+      <span className="home-eyebrow">WELCOME TO MAXVIEW</span>
+
+      <h1>
+        Your world of <span>fandom.</span>
+      </h1>
+
+      <p>
+        Discover anime, gaming, movies, TV shows, K-pop,
+        comics and manga - all in one place.
+      </p>
+
+      <div className="home-hero-actions">
+        <a href="/category/anime" className="btn btn-primary">
+          Explore Categories
+        </a>
+
+        <a href="/search" className="btn btn-secondary">
+          Search MaxView
+        </a>
+      </div>
+    </div>
+
+    <div className="home-hero-visual">
+  <img
+    src="/images/maxview-hero.png"
+    alt="MaxView entertainment and fandom experience"
+  />
+</div>
+
+  </div>
+</section>
 
             <section className="section">
                 <div className="container">
