@@ -1,0 +1,129 @@
+.merchandise-page {
+  padding: 60px 0 80px;
+}
+
+.merchandise-header {
+  width: min(100% - 40px, var(--container));
+  margin: 0 auto 40px;
+}
+
+.merchandise-header h1 {
+  margin-bottom: 10px;
+}
+
+.merchandise-header p {
+  max-width: 700px;
+}
+
+.merchandise-grid {
+  width: min(100% - 40px, var(--container));
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.merchandise-card {
+  background: var(--surface);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: var(--transition);
+}
+
+.merchandise-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(229, 9, 20, 0.45);
+  background: var(--surface-light);
+}
+
+.merchandise-image,
+.merchandise-image-placeholder {
+  width: 100%;
+  height: 240px;
+}
+
+.merchandise-image {
+  object-fit: cover;
+}
+
+.merchandise-image-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--surface-light);
+  color: var(--muted);
+}
+
+.merchandise-body {
+  padding: 24px;
+}
+
+.merchandise-category {
+  display: inline-block;
+  margin-bottom: 12px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(229, 9, 20, 0.12);
+  border: 1px solid rgba(229, 9, 20, 0.35);
+  color: var(--primary);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.merchandise-body h2 {
+  margin-bottom: 10px;
+  font-size: 1.4rem;
+}
+
+.merchandise-body p {
+  margin-bottom: 16px;
+}
+
+.merchandise-price {
+  display: block;
+  margin-bottom: 14px;
+  font-weight: 600;
+}
+
+.merchandise-details {
+  font-size: 0.9rem;
+}
+
+.merchandise-availability {
+  display: inline-block;
+  margin-top: 4px;
+  padding: 5px 10px;
+  border-radius: 999px;
+  background: rgba(34, 197, 94, 0.1);
+  color: var(--success);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+@media (max-width: 900px) {
+  .merchandise-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .merchandise-page {
+    padding: 40px 0 60px;
+  }
+
+  .merchandise-header,
+  .merchandise-grid {
+    width: min(100% - 24px, var(--container));
+  }
+
+  .merchandise-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .merchandise-image,
+  .merchandise-image-placeholder {
+    height: 200px;
+  }
+}

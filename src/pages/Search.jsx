@@ -7,6 +7,7 @@ import events from "../data/events.json";
 import ContentCard from "../components/ContentCard";
 import SearchBar from "../components/SearchBar";
 import SortControl from "../components/SortControl";
+import "./Search.css";
 
 function Search() {
   const [searchTerm, setSearchTerm] = useState("");
