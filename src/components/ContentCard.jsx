@@ -1,7 +1,11 @@
+import { Link } from "react-router-dom";
+
 function ContentCard({ item }) {
   return (
-    <div className="content-card">
-
+    <Link
+      to={`/article/${item.id}`}
+      className="content-card"
+    >
       {item.image || item.thumbnail ? (
         <img
           src={item.image || item.thumbnail}
@@ -15,7 +19,6 @@ function ContentCard({ item }) {
       )}
 
       <div className="content-card-body">
-
         <span className="content-card-category">
           {item.category}
         </span>
@@ -27,7 +30,6 @@ function ContentCard({ item }) {
         )}
 
         <div className="content-card-meta">
-
           {item.date && (
             <span>{item.date}</span>
           )}
@@ -35,7 +37,6 @@ function ContentCard({ item }) {
           {item.author && (
             <span>By {item.author}</span>
           )}
-
         </div>
 
         {item.mediaType && (
@@ -46,13 +47,11 @@ function ContentCard({ item }) {
 
         {item.location && (
           <span className="content-card-location">
-            📍 {item.location}
+            {item.location}
           </span>
         )}
-
       </div>
-
-    </div>
+    </Link>
   );
 }
 

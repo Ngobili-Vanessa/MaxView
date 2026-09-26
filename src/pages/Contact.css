@@ -1,0 +1,134 @@
+.contact-page {
+  padding: 70px 0 90px;
+}
+
+.contact-container {
+  width: min(100% - 40px, var(--container));
+  margin: 0 auto;
+}
+
+.contact-header {
+  max-width: 750px;
+  margin-bottom: 50px;
+}
+
+.contact-eyebrow {
+  display: inline-block;
+  margin-bottom: 14px;
+  color: var(--primary);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.contact-header h1 {
+  margin-bottom: 18px;
+  font-size: clamp(2.2rem, 5vw, 4rem);
+}
+
+.contact-header p {
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.contact-content {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 30px;
+  align-items: start;
+}
+
+.contact-info {
+  display: grid;
+  gap: 20px;
+}
+
+.contact-card,
+.contact-form {
+  padding: 30px;
+  background: var(--surface);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius);
+}
+
+.contact-card h2 {
+  margin-bottom: 12px;
+  font-size: 1.3rem;
+}
+
+.contact-card p {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.contact-form {
+  display: grid;
+  gap: 20px;
+}
+
+.form-group {
+  display: grid;
+  gap: 8px;
+}
+
+.form-group label {
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 13px 15px;
+  color: var(--text);
+  background: var(--surface-light);
+  border: 1px solid var(--glass-border);
+  border-radius: 10px;
+  font: inherit;
+  outline: none;
+  transition: var(--transition);
+}
+
+.form-group textarea {
+  resize: vertical;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  border-color: var(--primary);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: var(--muted);
+}
+
+.contact-form .btn {
+  width: fit-content;
+}
+
+@media (max-width: 800px) {
+  .contact-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-page {
+    padding: 50px 0 70px;
+  }
+
+  .contact-container {
+    width: min(100% - 24px, var(--container));
+  }
+
+  .contact-card,
+  .contact-form {
+    padding: 24px;
+  }
+
+  .contact-form .btn {
+    width: 100%;
+  }
+}
