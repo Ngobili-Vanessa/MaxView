@@ -18,6 +18,7 @@ function Navbar() {
           <a href="/category/anime" onClick={() => setMenuOpen(false)}>Categories</a>
           <a href="/search" onClick={() => setMenuOpen(false)}>Search</a>
           <a href="/bookmarks" onClick={() => setMenuOpen(false)}>Bookmarks</a>
+          <a href="/cosplay" onClick={() => setMenuOpen(false)}>Cosplay</a>
           <a href="/merchandise" onClick={() => setMenuOpen(false)}>Merchandise</a>
           <a href="/about" onClick={() => setMenuOpen(false)}>About</a>
           <a href="/contact" onClick={() => setMenuOpen(false)}>Contact</a>

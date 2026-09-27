@@ -84,3 +84,47 @@
   color: var(--muted);
   margin-bottom: 40px;
 }
+.article-featured {
+  display: inline-block;
+  margin-left: 10px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: var(--primary);
+  color: white;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.article-description {
+  font-weight: 600;
+}
+
+.article-body {
+  line-height: 1.8;
+}
+
+.article-tags {
+  margin-top: 30px;
+  padding-top: 24px;
+  border-top: 1px solid var(--glass-border);
+}
+
+.article-tags h3 {
+  margin-bottom: 14px;
+}
+
+.tags-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.article-tag {
+  display: inline-block;
+  padding: 7px 12px;
+  border-radius: 999px;
+  background: var(--surface);
+  border: 1px solid var(--glass-border);
+  color: var(--muted);
+  font-size: 0.85rem;
+}
