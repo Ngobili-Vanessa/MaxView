@@ -1,12 +1,175 @@
 [
   {
     "id": "merch-001",
-    "name": "Example Fandom Hoodie",
+    "name": "Demon Slayer T-Shirt",
     "category": "anime",
-    "image": "",
+    "image":" https://otakustoreng.com",
     "priceRange": "₦25,000 - ₦35,000",
-    "description": "A comfortable fandom-inspired hoodie for everyday wear.",
-    "details": "Available in different sizes and designs.",
+    "description":"Graphic Demon Slayer-inspired cotton T-shirt with a regular unisex fit and fade-resistant print",
+    "details":"Available in different sizes and designs.",
     "availability": "Available"
-  }
+  },
+
+
+  {
+    "id": "merch-002",
+    "name": "Luffy Gear 4 figure",
+    "category": "anime",
+    "image":" https://otakustoreng.com",
+    "priceRange": "₦40,000 - 70,000",
+    "description":"22cm Monkey D. Luffy Gear 4 collectible figure in a dynamic battle pose",
+    "details":"Not available.",
+    "availability":"Sold out"
+  },
+  {
+    "id": "merch-003",
+    "name": "Gojo Satoru Hoodie",
+    "category": "anime",
+    "image":" https://otakustoreng.com",
+    "priceRange": "₦30,000 - 60,000",
+    "description":"Anime streetwear hoodie featuring Gojo Satoru from Jujutsu Kaizen",
+    "details":"Available in different sizes and designs.",
+    "availability":"Available"
+  },
+
+   {
+    "id": "merch-004",
+    "name": "Naruto T-Shirt",
+    "category": "anime",
+    "image":" https://otakustoreng.com",
+    "priceRange": "₦14000",
+    "description":"Anime Cosplay T-Shirt inspired by Naruto",
+    "details":"Available in different sizes and designs.",
+    "availability":"Available"
+
+   },
+
+    {
+    "id": "merch-005",
+    "name": "Eren Tote Bag",
+    "category": "anime",
+    "image":" https://otakustoreng.com",
+    "priceRange": "₦7,000",
+    "description":"Anime Female Tote Bag inspired by Eren Yeager from Attack of the Titans",
+    "details":"Available in different sizes and designs.",
+    "availability":"Available"
+    },
+
+
+  {
+    "id": "merch-006",
+    "name": "Outer Wild's Campfire Hoodie",
+    "category": "Gaming",
+    "image":"www.fangamer.com",
+    "priceRange":" ₦98,494",
+    "description":"A premium, heavyweight streetwear hoodie feauturing subtle,lore-accurate embroidery from the game",
+    "details":"Available in different sizes and designs.",
+    "availability": "Available"
+
+  },
+
+   {
+    "id": "merch-007",
+    "name": "The Beginning Poster",
+    "category": "Gaming",
+    "image":" www.fangamer.com",
+    "priceRange": "₦31,994",
+    "description":"A Poster inspired by the characters of The Beginning Video Game",
+    "details":"Available in different designs.",
+    "availability":"Available"
+
+   },
+
+    {
+    "id": "merch-008",
+    "name": "Supergiant Games 15th Anniversary zip-up Hoodie",
+    "category": "Gaming",
+    "image":"www.fangamer.com",
+    "priceRange": "₦91,839",
+    "description":"A Hoodie designed by Nina Matsumato to commenorate the the studio's 15th Anniversary feauturing characters from each of its games.",
+    "details":"Available in different sizes and designs.",
+    "availability":"Available"
+    },
+
+     {
+    "id": "merch-009",
+    "name": "Hornet Mini Figurine",
+    "category":" Gaming",
+    "image":" www.fangamer.com",
+    "priceRange": "19,965",
+    "description":"A Figurine that is inspired by the protector of Hallownest from Hollow Knight",
+    "details":"Available in different sizes",
+    "availability":"Available"
+     },
+
+      {
+    "id": "merch-003",
+    "name": "Gojo Satoru Jujutsu Kaisen Hoodie",
+    "category": "anime",
+    "image":" https://otakustoreng.com",
+    "priceRange": "₦30,000 - 60,000",
+    "description":"Anime streetwear hoodie featuring Gojo Satoru from Jujutsu Kaizen",
+    "details":"Available in different sizes and designs.",
+    "availability":"Available"
+      },
+
+    {
+    "id": "merch-0011",
+    "name": "Official Lightsticks",
+    "category": "K-pop",
+    "image":" HARU AFRICA",
+    "priceRange": "₦53,240",
+    "description":"A handheld LED devices sync via bluetooth during live concerts to match stage lighting and light up the crowd in real time",
+    "details":"Available in different sizes and designs.",
+    "availability":"Available"
+    },
+
+    {
+    "id": "merch-0012",
+    "name": "Character Plushies & Dolls",
+    "category":" K-Pop",
+    "image":"Ubuy Nigeria",
+    "priceRange": "₦26,000",
+    "description":"Plush mascots designed to represent individual group members(such as BTS's BT21)",
+    "details":"Available in different sizes and designs.",
+    "availability":"Available" 
+    },
+
+    {
+    "id": "merch-0013",
+    "name": "Photocards & Collect Books",
+    "category": "K-pop",
+    "image":" Etsy",
+    "priceRange": "₦20,000",
+    "description":"Wallet-Sized photo prints included randomly inside physical albums or provided as exclusive pre-order benefits(POBs)",
+    "details":"Available in different sizes and designs.",
+    "availability":"Available" 
+    },
+
+    {
+    "id": "merch-0014",
+    "name": "Concert Slogan Towels",
+    "category": "K-pop",
+    "image":"kpop Omo",
+    "priceRange": "₦39,000",
+    "description":"Fabric or microfiber banners printed with a group or member's name and distinctive work",
+    "details":"Available in different designs.",
+    "availability":"Available" 
+    },
+
+    {
+    "id": "merch-0015",
+    "name": "Annual Season's Greetings Box Sets",
+    "category": "K-pop",
+    "image":" heyhallyu.com",
+    "priceRange": "₦59,895",
+    "description":"Special yearly merch packages released around November-December by individual groups to welcome the new year.",
+    "details":"Available in different designs.",
+    "availability":"Available"
+    }
+
+
 ]
+
+
+
