@@ -12,6 +12,8 @@ import Releases from "./pages/Releases";
 import Bookmarks from "./pages/Bookmarks";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
+import EventDetails from "./pages/EventDetails";
+import Calendar from "./pages/Calendar";
 
 
 function App() {
@@ -34,6 +36,8 @@ function App() {
   element={<CharacterDetails />}
 />
           <Route path="/events" element={<Events />} />
+          <Route path="/events/:id" element={<EventDetails />} />
+          <Route path="/calendar" element={<Calendar />} />
           <Route path="/trailers" element={<Trailers />} />
        <Route path="/merchandise" element={<Merchandise />} />
        <Route path="/releases" element={<Releases />} />

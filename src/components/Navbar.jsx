@@ -21,6 +21,9 @@ function Navbar() {
           <a href="/merchandise" onClick={() => setMenuOpen(false)}>Merchandise</a>
           <a href="/about" onClick={() => setMenuOpen(false)}>About</a>
           <a href="/contact" onClick={() => setMenuOpen(false)}>Contact</a>
+          <a href="/calendar" onClick={() => setMenuOpen(false)}>Calendar</a>
+          <a href="/events" onClick={() => setMenuOpen(false)}>Events</a>
+
         </nav>
 
         <button

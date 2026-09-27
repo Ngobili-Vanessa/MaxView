@@ -1,0 +1,28 @@
+[
+  {
+    "id": "character-001",
+    "name": "Naruto Uzumaki",
+    "category": "anime",
+    "series": "Naruto",
+    "image": "",
+    "biography": "Naruto Uzumaki is the main protagonist of the Naruto series and a young ninja from the Hidden Leaf Village.",
+    "traits": [
+      "Determined",
+      "Brave",
+      "Loyal"
+    ]
+  },
+  {
+    "id": "character-002",
+    "name": "Example Gaming Character",
+    "category": "gaming",
+    "series": "Example Game",
+    "image": "",
+    "biography": "An example gaming character used as placeholder content for MaxView.",
+    "traits": [
+      "Skilled",
+      "Adventurous",
+      "Competitive"
+    ]
+  }
+]
