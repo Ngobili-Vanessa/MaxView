@@ -5,8 +5,9 @@ import "./ArticleDetails.css";
 function ArticleDetails() {
   const { id } = useParams();
 
-  const article = articles.find((item) => item.id === id);
-
+  const article = articles.find(
+  (item) => String(item.id) === String(id)
+);
   if (!article) {
     return (
       <div className="article-details">
@@ -22,6 +23,11 @@ function ArticleDetails() {
         <span className="article-category">
           {article.category}
         </span>
+        {article.featured && (
+  <span className="article-featured">
+    Featured
+  </span>
+)}
 
         <h1>{article.title}</h1>
 
@@ -43,10 +49,27 @@ function ArticleDetails() {
 )}
 
       <div className="article-content">
-        <p>{article.description}</p>
+        <p className="article-description">
+  {article.description}
+</p>
 
-        <p>{article.content}</p>
+      <p className="article-body">
+  {article.content}
+</p>
       </div>
+      {article.tags && article.tags.length > 0 && (
+  <div className="article-tags">
+    <h3>Tags</h3>
+
+    <div className="tags-list">
+      {article.tags.map((tag, index) => (
+        <span key={index} className="article-tag">
+          {tag}
+        </span>
+      ))}
+    </div>
+  </div>
+)}
     </article>
   );
 }

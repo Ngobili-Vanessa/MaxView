@@ -1,0 +1,51 @@
+[
+  {
+    "id": "cosplay-001",
+    "title": "Naruto Uzumaki Cosplay",
+    "category": "anime",
+    "character": "Naruto Uzumaki",
+    "series": "Naruto",
+    "image": "",
+    "description": "A Naruto Uzumaki cosplay inspired by the iconic ninja character.",
+    "cosplayer": "Cosplay Creator",
+    "date": "2026-09-20",
+    "likes": 120,
+    "tags": [
+      "Naruto",
+      "Anime",
+      "Ninja"
+    ]
+  },
+  {
+    "id": "cosplay-002",
+    "title": "Gaming Character Cosplay",
+    "category": "gaming",
+    "character": "Example Character",
+    "series": "Example Game",
+    "image": "",
+    "description": "A gaming character cosplay inspired by a popular game.",
+    "cosplayer": "Cosplay Creator",
+    "date": "2026-09-18",
+    "likes": 95,
+    "tags": [
+      "Gaming",
+      "Cosplay"
+    ]
+  },
+  {
+    "id": "cosplay-003",
+    "title": "K-Pop Inspired Cosplay",
+    "category": "k-pop",
+    "character": "Example Character",
+    "series": "K-Pop",
+    "image": "",
+    "description": "A creative cosplay inspired by K-Pop fandom culture.",
+    "cosplayer": "Cosplay Creator",
+    "date": "2026-09-15",
+    "likes": 80,
+    "tags": [
+      "K-Pop",
+      "Cosplay"
+    ]
+  }
+]
