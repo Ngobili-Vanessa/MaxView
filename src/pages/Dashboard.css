@@ -1,0 +1,39 @@
+.dashboard-page {
+  min-height: calc(100vh - 80px);
+  padding: 60px 20px;
+  background: var(--bg);
+}
+
+.dashboard-container {
+  width: 100%;
+  max-width: var(--container);
+  margin: 0 auto;
+}
+
+.dashboard-welcome {
+  padding: 40px;
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius);
+  background: var(--glass);
+}
+
+.dashboard-eyebrow {
+  margin-bottom: 12px;
+  color: var(--primary);
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.dashboard-welcome h1 {
+  margin-bottom: 10px;
+  color: var(--white);
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 5vw, 3.2rem);
+}
+
+.dashboard-subtitle {
+  color: var(--muted);
+  font-size: 1rem;
+}
