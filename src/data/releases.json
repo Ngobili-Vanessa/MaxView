@@ -1,0 +1,20 @@
+[
+  {
+    "id": "release-001",
+    "title": "Example Anime Release",
+    "category": "anime",
+    "releaseDate": "2026-10-10",
+    "type": "anime",
+    "description": "An upcoming anime release to discover on MaxView.",
+    "image": ""
+  },
+  {
+    "id": "release-002",
+    "title": "Example Game Release",
+    "category": "gaming",
+    "releaseDate": "2026-11-05",
+    "type": "game",
+    "description": "An upcoming game release for gaming fans.",
+    "image": ""
+  }
+]

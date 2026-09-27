@@ -1,0 +1,87 @@
+.bookmarks-page {
+  padding: 60px 0 80px;
+}
+
+.bookmarks-header {
+  width: min(100% - 40px, var(--container));
+  margin: 0 auto 40px;
+}
+
+.bookmarks-header h1 {
+  margin-bottom: 10px;
+}
+
+.bookmarks-header p {
+  max-width: 700px;
+}
+
+.bookmarks-empty {
+  width: min(100% - 40px, 700px);
+  margin: 0 auto;
+  padding: 60px 30px;
+  text-align: center;
+  background: var(--surface);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius);
+}
+
+.bookmarks-empty h2 {
+  margin-bottom: 10px;
+}
+
+.bookmarks-empty p {
+  color: var(--muted);
+}
+
+.bookmarks-grid {
+  width: min(100% - 40px, var(--container));
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.bookmark-card {
+  padding: 24px;
+  background: var(--surface);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius);
+  transition: var(--transition);
+}
+
+.bookmark-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(229, 9, 20, 0.45);
+  background: var(--surface-light);
+}
+
+.bookmark-card h2 {
+  margin-bottom: 8px;
+  font-size: 1.3rem;
+}
+
+.bookmark-card p {
+  color: var(--muted);
+}
+
+@media (max-width: 900px) {
+  .bookmarks-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .bookmarks-page {
+    padding: 40px 0 60px;
+  }
+
+  .bookmarks-header,
+  .bookmarks-empty,
+  .bookmarks-grid {
+    width: min(100% - 24px, var(--container));
+  }
+
+  .bookmarks-grid {
+    grid-template-columns: 1fr;
+  }
+}
