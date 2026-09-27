@@ -16,6 +16,7 @@ const [selectedCategory, setSelectedCategory] = useState(
   categoryId || "all"
 );
   const [sort, setSort] = useState("newest");
+  const [contentType, setContentType] = useState("all");
 
   // Combine articles, media and events
   const allContent = useMemo(() => {
@@ -52,7 +53,12 @@ const [selectedCategory, setSelectedCategory] = useState(
         (item) => item.category === selectedCategory
       );
     }
-
+   // Content type filter
+if (contentType !== "all") {
+  result = result.filter(
+    (item) => item.contentType === contentType
+  );
+}
     // Sorting
     if (sort === "newest") {
       result.sort(
@@ -82,7 +88,7 @@ const [selectedCategory, setSelectedCategory] = useState(
     }
 
     return result;
-  }, [allContent, selectedCategory, sort]);
+  }, [allContent, selectedCategory, contentType, sort]);
 
   // Find selected category information
   const currentCategory = categories.find(
@@ -112,6 +118,8 @@ const [selectedCategory, setSelectedCategory] = useState(
         categories={categories}
         selectedCategory={selectedCategory}
         onCategoryChange={setSelectedCategory}
+        contentType={contentType}
+        onContentTypeChange={setContentType}
       />
 
       {/* Sort control */}

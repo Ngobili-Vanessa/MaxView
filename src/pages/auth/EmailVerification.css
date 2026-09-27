@@ -1,0 +1,104 @@
+.email-verification-page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  background: var(--bg);
+}
+
+.email-verification-container {
+  width: 100%;
+  max-width: 460px;
+  padding: 40px;
+  text-align: center;
+  background: var(--surface);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+}
+
+.verification-icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(34, 197, 94, 0.12);
+  border: 1px solid rgba(34, 197, 94, 0.3);
+  color: var(--success);
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.email-verification-header h1 {
+  margin-bottom: 12px;
+  color: var(--white);
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.email-verification-header p {
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.verification-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 30px;
+}
+
+.resend-button {
+  width: 100%;
+  padding: 13px 20px;
+  border: none;
+  border-radius: var(--radius-sm);
+  background: var(--primary);
+  color: var(--white);
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.resend-button:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+}
+
+.verification-login-link {
+  color: var(--primary);
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: color var(--transition);
+}
+
+.verification-login-link:hover {
+  color: var(--white);
+}
+
+.verification-note {
+  margin-top: 24px;
+  color: var(--muted);
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 480px) {
+  .email-verification-page {
+    padding: 24px 16px;
+  }
+
+  .email-verification-container {
+    padding: 30px 22px;
+  }
+
+  .email-verification-header h1 {
+    font-size: 1.75rem;
+  }
+}

@@ -3,15 +3,20 @@ import { useMemo, useState } from "react";
 import articles from "../data/articles.json";
 import media from "../data/media.json";
 import events from "../data/events.json";
+import characters from "../data/characters.json";
+import categories from "../data/categories.json";
 
 import ContentCard from "../components/ContentCard";
 import SearchBar from "../components/SearchBar";
 import SortControl from "../components/SortControl";
+import FilterBar from "../components/FilterBar";
 import "./Search.css";
 
 function Search() {
   const [searchTerm, setSearchTerm] = useState("");
   const [sort, setSort] = useState("newest");
+  const [selectedCategory, setSelectedCategory] = useState("all");
+  const [contentType, setContentType] = useState("all");
 
   // Combine all content
   const allContent = useMemo(() => {
@@ -21,20 +26,28 @@ function Search() {
     }));
 
     const mediaItems = media.map((item) => ({
-      ...item,
-      image: item.thumbnail,
-      contentType: "media",
-    }));
+    ...item,
+    image: item.thumbnail,
+    contentType: "media",
+}));
 
     const eventItems = events.map((item) => ({
       ...item,
       contentType: "event",
     }));
 
+    const characterItems = characters.map((item) => ({
+  ...item,
+  title: item.name,
+  description: item.biography,
+  image: item.image,
+  contentType: "character",
+}));
     return [
       ...articleItems,
       ...mediaItems,
       ...eventItems,
+      ...characterItems,
     ];
   }, []);
 
@@ -74,6 +87,23 @@ function Search() {
       );
     });
 
+    // Category filter
+if (selectedCategory !== "all") {
+    results = results.filter(
+        (item) =>
+            item.category?.toLowerCase() ===
+            selectedCategory.toLowerCase()
+    );
+}
+
+// Content type filter
+if (contentType !== "all") {
+    results = results.filter(
+        (item) => item.contentType === contentType
+    );
+}
+
+
     // Sorting
     if (sort === "newest") {
       results.sort(
@@ -103,7 +133,13 @@ function Search() {
     }
 
     return results;
-  }, [searchTerm, sort, allContent]);
+  }, [
+    searchTerm,
+    selectedCategory,
+    contentType,
+    sort,
+    allContent
+]);
 
   return (
     <div className="search-page">
@@ -135,6 +171,14 @@ function Search() {
           </p>
         </div>
       )}
+
+      <FilterBar
+    categories={categories}
+    selectedCategory={selectedCategory}
+    onCategoryChange={setSelectedCategory}
+    contentType={contentType}
+    onContentTypeChange={setContentType}
+/>
 
       <SortControl
         value={sort}

@@ -1,10 +1,13 @@
 import { useParams } from "react-router-dom";
 import characters from "../data/characters.json";
+import "./CharacterDetails.css";
 
 function CharacterDetails() {
   const { id } = useParams();
 
-  const character = characters.find((item) => item.id === id);
+ const character = characters.find(
+  (item) => String(item.id) === String(id)
+);
 
   if (!character) {
     return (
@@ -39,12 +42,15 @@ function CharacterDetails() {
 
           <h3>{character.series}</h3>
 
-          <p>{character.biography}</p>
-
-          <div className="character-traits">
-            {character.traits.map((trait) => (
-              <span key={trait}>{trait}</span>
-            ))}
+          <p className="character-biography">
+  {character.biography}
+</p>
+        <div className="character-traits">
+  {character.traits?.map((trait) => (
+    <span key={trait} className="character-trait">
+  {trait}
+</span>
+  ))}
           </div>
         </div>
       </div>
