@@ -1,29 +1,45 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
 import Home from "./pages/Home"; 
+import Category from "./pages/Category";
+import Search from "./pages/Search";
+import ArticleDetails from "./pages/ArticleDetails";
+import CharacterDetails from "./pages/CharacterDetails";
+import Events from "./pages/Events";
+import Trailers from "./pages/Trailers";
+import Merchandise from "./pages/Merchandise";
+import Releases from "./pages/Releases";
+import Bookmarks from "./pages/Bookmarks";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route element={<Layout />}>
-          <Route path="/" element={<Home/>} />
-          <Route
-            path="/category/:categoryId"
-            element={<div>Category</div>}
-          />
-          <Route path="/search" element={<div>Search</div>} />
-          <Route path="/article/:id" element={<div>Article Details</div>} />
-          <Route
-            path="/character/:id"
-            element={<div>Character Details</div>}
-          />
-          <Route path="/events" element={<div>Events</div>} />
-          <Route path="/trailers" element={<div>Trailers</div>} />
-          <Route path="/merchandise" element={<div>Merchandise</div>} />
-          <Route path="/bookmarks" element={<div>Bookmarks</div>} />
-          <Route path="/about" element={<div>About MaxView</div>} />
-          <Route path="/contact" element={<div>Contact</div>} />
+          <Route path="/" element={<Home/>} /><Route
+  path="/category/:categoryId"
+  element={<Category />}
+/>
+
+<Route path="/search" element={<Search />} />
+       <Route
+  path="/article/:id"
+  element={<ArticleDetails />}
+/>
+  <Route
+  path="/character/:id"
+  element={<CharacterDetails />}
+/>
+          <Route path="/events" element={<Events />} />
+          <Route path="/trailers" element={<Trailers />} />
+       <Route path="/merchandise" element={<Merchandise />} />
+       <Route path="/releases" element={<Releases />} />
+         <Route path="/bookmarks" element={<Bookmarks />} />
+  <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
         </Route>
       </Routes>
     </BrowserRouter>

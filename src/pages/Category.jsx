@@ -1,4 +1,5 @@
 import { useMemo, useState } from "react";
+import { useParams } from "react-router-dom";
 
 import articles from "../data/articles.json";
 import media from "../data/media.json";
@@ -8,9 +9,12 @@ import categories from "../data/categories.json";
 import ContentCard from "../components/ContentCard";
 import FilterBar from "../components/FilterBar";
 import SortControl from "../components/SortControl";
-
+import "./Category.css";
 function Category() {
-  const [selectedCategory, setSelectedCategory] = useState("all");
+  const { categoryId } = useParams();
+const [selectedCategory, setSelectedCategory] = useState(
+  categoryId || "all"
+);
   const [sort, setSort] = useState("newest");
 
   // Combine articles, media and events
