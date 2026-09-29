@@ -12,13 +12,10 @@ import SortControl from "../components/SortControl";
 import "./Category.css";
 function Category() {
   const { categoryId } = useParams();
-const [selectedCategory, setSelectedCategory] = useState(
-  categoryId || "all"
-);
+  const [selectedCategory, setSelectedCategory] = useState(categoryId || "all");
   const [sort, setSort] = useState("newest");
   const [contentType, setContentType] = useState("all");
 
-  // Combine articles, media and events
   const allContent = useMemo(() => {
     const articleItems = articles.map((item) => ({
       ...item,
@@ -36,75 +33,46 @@ const [selectedCategory, setSelectedCategory] = useState(
       contentType: "event",
     }));
 
-    return [
-      ...articleItems,
-      ...mediaItems,
-      ...eventItems,
-    ];
+    return [...articleItems, ...mediaItems, ...eventItems];
   }, []);
 
-  // Filter and sort content
   const filteredContent = useMemo(() => {
     let result = [...allContent];
 
-    // Category filter
     if (selectedCategory !== "all") {
-      result = result.filter(
-        (item) => item.category === selectedCategory
-      );
+      result = result.filter((item) => item.category === selectedCategory);
     }
-   // Content type filter
-if (contentType !== "all") {
-  result = result.filter(
-    (item) => item.contentType === contentType
-  );
-}
-    // Sorting
+
+    if (contentType !== "all") {
+      result = result.filter((item) => item.contentType === contentType);
+    }
     if (sort === "newest") {
-      result.sort(
-        (a, b) =>
-          new Date(b.date) - new Date(a.date)
-      );
+      result.sort((a, b) => new Date(b.date) - new Date(a.date));
     }
 
     if (sort === "oldest") {
-      result.sort(
-        (a, b) =>
-          new Date(a.date) - new Date(b.date)
-      );
+      result.sort((a, b) => new Date(a.date) - new Date(b.date));
     }
 
     if (sort === "title") {
-      result.sort((a, b) =>
-        a.title.localeCompare(b.title)
-      );
+      result.sort((a, b) => a.title.localeCompare(b.title));
     }
 
     if (sort === "likes") {
-      result.sort(
-        (a, b) =>
-          (b.likes || 0) - (a.likes || 0)
-      );
+      result.sort((a, b) => (b.likes || 0) - (a.likes || 0));
     }
 
     return result;
   }, [allContent, selectedCategory, contentType, sort]);
 
-  // Find selected category information
   const currentCategory = categories.find(
-    (category) => category.id === selectedCategory
+    (category) => category.id === selectedCategory,
   );
 
   return (
     <div className="category-page">
-
-      {/* Category heading */}
       <div className="category-header">
-        <h1>
-          {currentCategory
-            ? currentCategory.name
-            : "Explore MaxView"}
-        </h1>
+        <h1>{currentCategory ? currentCategory.name : "Explore MaxView"}</h1>
 
         <p>
           {currentCategory
@@ -113,7 +81,6 @@ if (contentType !== "all") {
         </p>
       </div>
 
-      {/* Category filters */}
       <FilterBar
         categories={categories}
         selectedCategory={selectedCategory}
@@ -122,26 +89,17 @@ if (contentType !== "all") {
         onContentTypeChange={setContentType}
       />
 
-      {/* Sort control */}
-      <SortControl
-        value={sort}
-        onChange={setSort}
-      />
+      <SortControl value={sort} onChange={setSort} />
 
-      {/* Content */}
       <div className="content-grid">
         {filteredContent.length > 0 ? (
           filteredContent.map((item) => (
-            <ContentCard
-              key={`${item.contentType}-${item.id}`}
-              item={item}
-            />
+            <ContentCard key={`${item.contentType}-${item.id}`} item={item} />
           ))
         ) : (
           <p>No content found.</p>
         )}
       </div>
-
     </div>
   );
 }

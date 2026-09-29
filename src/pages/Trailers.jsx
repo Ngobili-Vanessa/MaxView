@@ -2,17 +2,13 @@ import media from "../data/media.json";
 import "./Trailers.css";
 
 function Trailers() {
-  const trailers = media.filter(
-    (item) => item.mediaType === "trailer"
-  );
+  const trailers = media.filter((item) => item.mediaType === "trailer");
 
   return (
     <section className="trailers-page">
       <div className="trailers-header">
         <h1>Trailers</h1>
-        <p>
-          Watch the latest trailers, previews and upcoming releases.
-        </p>
+        <p>Watch the latest trailers, previews and upcoming releases.</p>
       </div>
 
       <div className="trailers-grid">
@@ -31,9 +27,7 @@ function Trailers() {
             )}
 
             <div className="trailer-body">
-              <span className="trailer-category">
-                {trailer.category}
-              </span>
+              <span className="trailer-category">{trailer.category}</span>
 
               <h2>{trailer.title}</h2>
 

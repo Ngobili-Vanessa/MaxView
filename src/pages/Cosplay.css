@@ -17,7 +17,6 @@
   opacity: 0.8;
 }
 
-/* Filters */
 .cosplay-filters {
   display: flex;
   gap: 12px;
@@ -39,7 +38,6 @@
   background: #ff4b3e;
 }
 
-/* Cards */
 .cosplay-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -112,7 +110,6 @@
   margin-top: 15px;
 }
 
-/* Responsive */
 @media (max-width: 900px) {
   .cosplay-grid {
     grid-template-columns: repeat(2, 1fr);

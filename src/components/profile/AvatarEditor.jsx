@@ -17,19 +17,20 @@ function AvatarEditor({ image, onApply, onRemove, onClose }) {
 
   return (
     <div className="avatar-editor-overlay">
-
       <div className="avatar-editor">
-
         <div className="avatar-editor-header">
           <div>
             <h2>Adjust Your Avatar</h2>
-            <p>Position and resize your image to fit your avatar.</p>
+            <p>
+              Position and resize your image to fit your avatar.
+            </p>
           </div>
 
           <button
             type="button"
             className="avatar-editor-close"
             onClick={onClose}
+            aria-label="Close avatar editor"
           >
             ×
           </button>
@@ -47,13 +48,12 @@ function AvatarEditor({ image, onApply, onRemove, onClose }) {
                 }}
               />
             ) : (
-              <span>JD</span>
+              <span>U</span>
             )}
           </div>
         </div>
 
         <div className="avatar-controls">
-
           <div className="avatar-control">
             <div className="control-label">
               <label htmlFor="avatarZoom">Zoom</label>
@@ -67,13 +67,17 @@ function AvatarEditor({ image, onApply, onRemove, onClose }) {
               max="3"
               step="0.1"
               value={zoom}
-              onChange={(event) => setZoom(Number(event.target.value))}
+              onChange={(event) =>
+                setZoom(Number(event.target.value))
+              }
             />
           </div>
 
           <div className="avatar-control">
             <div className="control-label">
-              <label htmlFor="avatarPositionX">Horizontal Position</label>
+              <label htmlFor="avatarPositionX">
+                Horizontal Position
+              </label>
               <span>{positionX}%</span>
             </div>
 
@@ -83,13 +87,17 @@ function AvatarEditor({ image, onApply, onRemove, onClose }) {
               min="0"
               max="100"
               value={positionX}
-              onChange={(event) => setPositionX(Number(event.target.value))}
+              onChange={(event) =>
+                setPositionX(Number(event.target.value))
+              }
             />
           </div>
 
           <div className="avatar-control">
             <div className="control-label">
-              <label htmlFor="avatarPositionY">Vertical Position</label>
+              <label htmlFor="avatarPositionY">
+                Vertical Position
+              </label>
               <span>{positionY}%</span>
             </div>
 
@@ -99,14 +107,14 @@ function AvatarEditor({ image, onApply, onRemove, onClose }) {
               min="0"
               max="100"
               value={positionY}
-              onChange={(event) => setPositionY(Number(event.target.value))}
+              onChange={(event) =>
+                setPositionY(Number(event.target.value))
+              }
             />
           </div>
-
         </div>
 
         <div className="avatar-editor-actions">
-
           <button
             type="button"
             className="remove-avatar-button"
@@ -116,7 +124,6 @@ function AvatarEditor({ image, onApply, onRemove, onClose }) {
           </button>
 
           <div className="avatar-editor-right-actions">
-
             <button
               type="button"
               className="cancel-avatar-button"
@@ -132,13 +139,9 @@ function AvatarEditor({ image, onApply, onRemove, onClose }) {
             >
               Apply
             </button>
-
           </div>
-
         </div>
-
       </div>
-
     </div>
   );
 }

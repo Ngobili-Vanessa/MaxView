@@ -9,28 +9,17 @@
 
 .email-verification-container {
   width: 100%;
-  max-width: 460px;
+  max-width: 440px;
   padding: 40px;
-  text-align: center;
   background: var(--surface);
   border: 1px solid var(--glass-border);
   border-radius: var(--radius);
+  text-align: center;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
 }
 
-.verification-icon {
-  width: 64px;
-  height: 64px;
-  margin: 0 auto 24px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  background: rgba(34, 197, 94, 0.12);
-  border: 1px solid rgba(34, 197, 94, 0.3);
-  color: var(--success);
-  font-size: 1.8rem;
-  font-weight: 700;
+.email-verification-header {
+  margin-bottom: 30px;
 }
 
 .email-verification-header h1 {
@@ -38,55 +27,53 @@
   color: var(--white);
   font-family: var(--font-heading);
   font-size: 2rem;
-  font-weight: 700;
 }
 
 .email-verification-header p {
   color: var(--muted);
   font-size: 0.95rem;
-  line-height: 1.7;
+  line-height: 1.6;
 }
 
-.verification-actions {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  margin-top: 30px;
-}
-
-.resend-button {
-  width: 100%;
-  padding: 13px 20px;
-  border: none;
+.verification-message {
+  padding: 20px;
+  border: 1px solid var(--glass-border);
   border-radius: var(--radius-sm);
-  background: var(--primary);
-  color: var(--white);
-  font-weight: 600;
-  cursor: pointer;
-  transition: var(--transition);
+  background: var(--surface-light);
 }
 
-.resend-button:hover {
-  background: var(--primary-dark);
-  transform: translateY(-2px);
+.verification-message p {
+  margin-bottom: 12px;
+  color: var(--muted);
+  font-size: 0.9rem;
 }
 
-.verification-login-link {
+.verification-message button {
+  border: none;
+  background: transparent;
   color: var(--primary);
   font-size: 0.9rem;
   font-weight: 600;
-  transition: color var(--transition);
+  cursor: pointer;
 }
 
-.verification-login-link:hover {
+.verification-message button:hover {
   color: var(--white);
 }
 
-.verification-note {
+.back-to-login {
   margin-top: 24px;
-  color: var(--muted);
-  font-size: 0.8rem;
-  line-height: 1.5;
+}
+
+.back-to-login a {
+  color: var(--primary);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.back-to-login a:hover {
+  color: var(--white);
 }
 
 @media (max-width: 480px) {

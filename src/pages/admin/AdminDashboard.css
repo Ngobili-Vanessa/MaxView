@@ -1,0 +1,71 @@
+.admin-dashboard {
+  min-height: 100vh;
+  padding: 60px 20px;
+  background: var(--bg);
+}
+
+.admin-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.admin-header {
+  margin-bottom: 40px;
+}
+
+.admin-eyebrow {
+  margin-bottom: 10px;
+  color: var(--primary);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.admin-header h1 {
+  margin-bottom: 10px;
+  color: var(--white);
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+}
+
+.admin-header p {
+  color: var(--muted);
+}
+
+.admin-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.admin-card {
+  padding: 28px;
+  background: var(--surface);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius);
+}
+
+.admin-card h2 {
+  margin-bottom: 10px;
+  color: var(--white);
+}
+
+.admin-card p {
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+@media (max-width: 700px) {
+  .admin-dashboard {
+    padding: 40px 16px;
+  }
+
+  .admin-header h1 {
+    font-size: 2rem;
+  }
+
+  .admin-cards {
+    grid-template-columns: 1fr;
+  }
+}

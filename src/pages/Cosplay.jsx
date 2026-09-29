@@ -10,7 +10,7 @@ function Cosplay() {
       ? cosplay
       : cosplay.filter(
           (item) =>
-            item.category?.toLowerCase() === selectedCategory.toLowerCase()
+            item.category?.toLowerCase() === selectedCategory.toLowerCase(),
         );
 
   return (
@@ -82,9 +82,7 @@ function Cosplay() {
                 ))}
               </div>
 
-              <div className="cosplay-likes">
-                ❤️ {item.likes}
-              </div>
+              <div className="cosplay-likes">{item.likes} likes</div>
             </div>
           </div>
         ))}

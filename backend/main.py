@@ -2,6 +2,7 @@ from dotenv import load_dotenv
 import os
 
 from fastapi import FastAPI, Depends, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy.orm import Session
 
 from database import SessionLocal
@@ -20,6 +21,7 @@ from schemas import (
 
 from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
 from jose import JWTError, jwt
+import secrets
 
 load_dotenv()
 
@@ -27,6 +29,18 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 ALGORITHM = "HS256"
 security = HTTPBearer()
 app = FastAPI()
+reset_tokens = {}
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[
+        "http://localhost:5173",
+        "http://127.0.0.1:5173",
+    ],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
 
 
@@ -173,3 +187,103 @@ def create_bookmark(
     db.refresh(new_bookmark)
 
     return new_bookmark
+
+@app.get("/bookmarks", response_model=list[BookmarkResponse])
+def get_bookmarks(
+    current_user: User = Depends(get_current_user),
+    db: Session = Depends(get_db)
+):
+    return db.query(Bookmark).filter(
+        Bookmark.user_id == current_user.id
+    ).all()
+
+@app.get("/bookmarks", response_model=list[BookmarkResponse])
+def get_bookmarks(
+    current_user: User = Depends(get_current_user),
+    db: Session = Depends(get_db)
+):
+    return db.query(Bookmark).filter(
+        Bookmark.user_id == current_user.id
+    ).all()
+
+@app.put("/bookmarks/{bookmark_id}", response_model=BookmarkResponse)
+def update_bookmark(
+    bookmark_id: int,
+    bookmark: BookmarkCreate,
+    current_user: User = Depends(get_current_user),
+    db: Session = Depends(get_db)
+):
+    existing_bookmark = db.query(Bookmark).filter(
+        Bookmark.id == bookmark_id,
+        Bookmark.user_id == current_user.id
+    ).first()
+
+    if not existing_bookmark:
+        raise HTTPException(
+            status_code=404,
+            detail="Bookmark not found."
+        )
+
+    existing_bookmark.note = bookmark.note
+
+    db.commit()
+    db.refresh(existing_bookmark)
+
+    return existing_bookmark
+
+@app.post("/forgot-password")
+def forgot_password(
+    data: dict,
+    db: Session = Depends(get_db)
+):
+    email = data.get("email")
+
+    user = db.query(User).filter(User.email == email).first()
+
+    if not user:
+        raise HTTPException(
+            status_code=404,
+            detail="No account found with that email."
+        )
+
+    reset_token = secrets.token_urlsafe(32)
+    reset_tokens[reset_token] = user.id
+
+    return {
+        "message": "Password reset request created.",
+        "reset_token": reset_token
+    }
+@app.post("/reset-password")
+def reset_password(
+    data: dict,
+    db: Session = Depends(get_db)
+):
+    reset_token = data.get("reset_token")
+    new_password = data.get("new_password")
+
+    user_id = reset_tokens.get(reset_token)
+
+    if not user_id:
+        raise HTTPException(
+            status_code=400,
+            detail="Invalid or expired reset token."
+        )
+
+    user = db.query(User).filter(User.id == user_id).first()
+
+    if not user:
+        raise HTTPException(
+            status_code=404,
+            detail="User not found."
+        )
+
+    user.password_hash = pwd_context.hash(new_password)
+
+    db.commit()
+
+    del reset_tokens[reset_token]
+
+    return {
+        "message": "Password reset successfully."
+    }
+
