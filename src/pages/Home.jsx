@@ -1,8 +1,11 @@
+import { Link } from "react-router-dom";
 import "./Home.css";
+
 import categories from "../data/categories.json";
 import articles from "../data/articles.json";
 import media from "../data/media.json";
 import events from "../data/events.json";
+
 import ContentCard from "../components/ContentCard";
 
 function Home() {
@@ -16,10 +19,14 @@ function Home() {
 
   return (
     <div className="home">
+
       <section className="home-hero">
         <div className="container home-hero-container">
+
           <div className="home-hero-content">
-            <span className="home-eyebrow">WELCOME TO MAXVIEW</span>
+            <span className="home-eyebrow">
+              WELCOME TO MAXVIEW
+            </span>
 
             <h1>
               Your world of <span>fandom.</span>
@@ -31,13 +38,19 @@ function Home() {
             </p>
 
             <div className="home-hero-actions">
-              <a href="/category/anime" className="btn btn-primary">
+              <Link
+                to="/category/anime"
+                className="btn btn-primary"
+              >
                 Explore Categories
-              </a>
+              </Link>
 
-              <a href="/search" className="btn btn-secondary">
+              <Link
+                to="/search"
+                className="btn btn-secondary"
+              >
                 Search MaxView
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -47,23 +60,29 @@ function Home() {
               alt="MaxView entertainment and fandom experience"
             />
           </div>
+
         </div>
       </section>
 
       <section className="section">
         <div className="container">
+
           <div className="section-header">
             <h2>Explore your fandom</h2>
-            <p>Find something you love and dive deeper.</p>
+            <p>
+              Find something you love and dive deeper.
+            </p>
           </div>
 
           <div className="categories-grid">
+
             {categories.map((category) => (
-              <a
+              <Link
                 key={category.id}
-                href={`/category/${category.id}`}
+                to={`/category/${category.id}`}
                 className="card category-card"
               >
+
                 {category.image ? (
                   <img
                     src={category.image}
@@ -77,22 +96,33 @@ function Home() {
 
                 <div className="category-card-body">
                   <h3>{category.name}</h3>
-                  <p>{category.description}</p>
+
+                  <p>
+                    {category.description}
+                  </p>
                 </div>
-              </a>
+
+              </Link>
             ))}
+
           </div>
         </div>
       </section>
 
+
       <section className="section">
         <div className="container">
+
           <div className="section-header">
             <h2>Featured on MaxView</h2>
-            <p>Stories, media and moments worth discovering.</p>
+
+            <p>
+              Stories, media and moments worth discovering.
+            </p>
           </div>
 
           <div className="featured-grid">
+
             {featuredContent.length > 0 ? (
               featuredContent.map((item) => (
                 <ContentCard
@@ -101,11 +131,38 @@ function Home() {
                 />
               ))
             ) : (
-              <p>No featured content available yet.</p>
+              <p>
+                No featured content available yet.
+              </p>
             )}
+
           </div>
+
         </div>
       </section>
+
+
+      <section className="section sitemap-home-section">
+        <div className="container">
+
+          <div className="section-header">
+            <h2>Explore MaxView</h2>
+
+            <p>
+              Find your way around the platform.
+            </p>
+          </div>
+
+          <Link
+            to="/sitemap"
+            className="btn btn-secondary"
+          >
+            View Site Map
+          </Link>
+
+        </div>
+      </section>
+
     </div>
   );
 }

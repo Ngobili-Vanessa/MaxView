@@ -24,6 +24,7 @@ import Profile from "./pages/profile/Profile";
 import EditProfile from "./pages/profile/EditProfile";
 import Dashboard from "./pages/Dashboard";
 import AdminDashboard from "./pages/admin/AdminDashboard";
+import Sitemap from "./pages/Sitemap";
 
 function App() {
   return (
@@ -40,6 +41,7 @@ function App() {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />
+          <Route path="/sitemap" element={<Sitemap />} />
           <Route path="/category/:categoryId" element={<Category />} />
           <Route path="/search" element={<Search />} />
           <Route path="/article/:id" element={<ArticleDetails />} />
